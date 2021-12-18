@@ -1,0 +1,17 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÞÒ©Ø
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÄýýØ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(•è²Œ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(®£ûœûÿÿÿÿ
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(´‹¹öþÿÿÿÿ
+o
+java:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(úÛÒå
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(Ýí·Áùÿÿÿÿ8Šûã¥Ü/
+H
+java:S1144"2Remove this unused private "sumListSquare" method.(°½¸ì
+C
+java:S1144%"-Remove this unused private "showList" method.(Ý¥É£
+G
+java:S1144,",Remove this unused private "squares" method.(¢ÖØãýÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(òÍ„ç

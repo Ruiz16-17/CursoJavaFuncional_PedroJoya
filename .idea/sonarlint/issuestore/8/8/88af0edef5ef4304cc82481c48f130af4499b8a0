@@ -1,0 +1,31 @@
+
+J
+java:S3740"/Provide the parametrized type for this generic.(Î¦ˆ™úÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ŞÒ©Ø
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(ÄııØ
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(•è²Œ
+N	java:S106/"9Replace this use of System.out or System.err by a logger.(Î Üñ
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(Î Üñ
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(®£ûœûÿÿÿÿ
+S	java:S106M"9Replace this use of System.out or System.err by a logger.(Êå„êşÿÿÿÿ
+N	java:S106P"9Replace this use of System.out or System.err by a logger.(äĞ¾ã
+S	java:S106f"9Replace this use of System.out or System.err by a logger.(ÍÅü‹ùÿÿÿÿ
+C
+java:S1604"(Make this anonymous inner class a lambda(¿ãÏ£ÿÿÿÿÿ
+>
+java:S1604#"(Make this anonymous inner class a lambda(İå»î
+C
+java:S1604,"(Make this anonymous inner class a lambda(–¥úˆıÿÿÿÿ
+=
+java:S16045"(Make this anonymous inner class a lambda(îÑM
+>
+java:S1604;"(Make this anonymous inner class a lambda(Å¤ªÁ
+=
+java:S1604F"(Make this anonymous inner class a lambda(é¬ÿ
+>
+java:S1604R"(Make this anonymous inner class a lambda(Á‰õ¯
+C
+java:S1604X"(Make this anonymous inner class a lambda(›ÚÜüÿÿÿÿ
+C
+java:S1604_"(Make this anonymous inner class a lambda(Ü—×Ûûÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(×òÂ÷

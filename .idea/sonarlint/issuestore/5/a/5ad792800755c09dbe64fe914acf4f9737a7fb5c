@@ -1,0 +1,23 @@
+
+Q
+java:S3740"/Provide the parametrized type for this generic.(æààùÿÿÿÿ8ÙŒòÃÜ/
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ŞÒ©Ø
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(ÄııØ
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(•è²Œ
+N	java:S106/"9Replace this use of System.out or System.err by a logger.(Î Üñ
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(Î Üñ
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(®£ûœûÿÿÿÿ
+Z	java:S106M"9Replace this use of System.out or System.err by a logger.(Êå„êşÿÿÿÿ8Ÿ¤ş§Ü/
+J
+java:S1604"(Make this anonymous inner class a lambda(ûÕ›ûÿÿÿÿ8ÁòÃÜ/
+J
+java:S1604#"(Make this anonymous inner class a lambda(Û’Âûÿÿÿÿ8ÁòÃÜ/
+J
+java:S1604,"(Make this anonymous inner class a lambda(–¥úˆıÿÿÿÿ8ÁòÃÜ/
+D
+java:S16045"(Make this anonymous inner class a lambda(ˆšÄk8ÁòÃÜ/
+E
+java:S1604;"(Make this anonymous inner class a lambda(ÆŠ³õ8ÁòÃÜ/
+E
+java:S1604F"(Make this anonymous inner class a lambda(®¢”8ÉòÃÜ/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…¤û×ıÿÿÿÿ

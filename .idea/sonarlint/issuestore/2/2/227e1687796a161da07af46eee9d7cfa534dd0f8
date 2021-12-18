@@ -1,0 +1,12 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(äĞ¾ã
+B
+java:S1612",Replace this lambda with a method reference.(«óÓ…
+N	java:S106"9Replace this use of System.out or System.err by a logger.(«óÓ…
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÍÅü‹ùÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(î‰ß¦ıÿÿÿÿ
+j
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(›‚¦´
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÓÌí
