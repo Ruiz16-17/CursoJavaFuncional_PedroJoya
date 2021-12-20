@@ -1,9 +1,6 @@
 package main.v11Streams;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -104,6 +101,111 @@ public class Main {
 
         System.out.println("resultadoRange = " + resultadoRange);
 
+        //---------------------------------------------------------MAP o TRANSFORMAR
+
+        List<String> resultMap = IntStream.range(0, 10)
+                .boxed()
+                .map(integer -> "V( " + integer + " )")
+                .collect(Collectors.toList());
+
+        System.out.println("resultMap = " + resultMap);
+
+        //flatmap se utiliza cuando el retorno de lambda sea un stream de un tipo (Stream<Integer>,Stream<String>)
+
+        List<Integer> resultFlatMap = Stream.of(2, 4, 6)
+                .flatMap(value -> getRandomNumbers(value))
+                .collect(Collectors.toList());
+
+        System.out.println("resultFlatMap = " + resultFlatMap);
+
+        //Tratamiento idividual de cada uno de los elementos de un Stream:
+        //El forEach es uno de ellos, pero este, es una operación terminal y particularmente, no retorna nada
+        //El peek es otro,este a diferencia de forEach, tiene un retorno
+
+        List<Integer> resultPeek = Stream.of(2, 4, 6)
+                .peek(System.out::println)
+                .collect(Collectors.toList());
+
+        System.out.println("resultPeek = " + resultPeek);
+
+        //Ordenar con sorted, sin argumentos ordena por defecto, en el caso de los números, ordena de menor a mayor
+
+        List<Integer> resultSorted = Stream.of(2, 6, 4, 3, 1, 5)
+                .sorted()
+                .collect(Collectors.toList());
+
+        System.out.println("resultSorted = " + resultSorted);
+
+        //Pero cuando introducimos la interfaz de ordenamiento Compartor, podemos ordenar con algunos criterios ya definidos
+        //por la misma interfaz
+
+        List<Integer> resultSortedComparator = Stream.of(2, 6, 4, 3, 1, 5)
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
+
+        System.out.println("resultSortedComparator = " + resultSortedComparator);
+
+        //----------------------------------------------------------------REDUCCIÓN---------------------
+        //Método count. Cuenta el número de elementos del Stream retornando un Long
+        //IntStream, LongStream, DoubleStream tiene un método llamado sum que calcula la suma de los elementos del Stream
+
+        int resultIntStreamSum = IntStream.range(1, 10).sum();
+
+        System.out.println("resultIntStreamSum = " + resultIntStreamSum);
+
+        int resultStreamSum = Stream.of(1, 2, 3)
+                .mapToInt(Integer::intValue)
+                .sum();
+
+        System.out.println("resultStreamSum = " + resultStreamSum);
+
+        long resultStreamCount = Stream.of(1, 2, 3)
+                .count();
+
+        System.out.println("resultStreamCount = " + resultStreamCount);
+
+        Stream.of(1, 2, 3)
+                //        .filter(value -> value > 5)
+                .mapToInt(Integer::intValue)
+                .max()
+                .ifPresentOrElse(System.out::println, () -> System.out.println("El Stream está vacío"));
+
+        Stream.of(1, 2, 3)
+                .min(Comparator.naturalOrder())
+                .ifPresentOrElse(System.out::println, () -> System.out.println("El Stream está vacío"));
+
+        //reduce
+
+        Stream.of(1, 2, 3, 4)
+                //           .filter(value -> value > 5)
+                .reduce((acumulator, value) -> acumulator * value)
+                .ifPresentOrElse(
+                        System.out::println,
+                        () -> System.out.println("No hay reducción porque el Stream está vacío")
+                );
+
+        //Otro reduce, la identidad es el valor inicial del acumulador
+
+        int resultReduceIdentity = Stream.of(1, 2, 3, 4)
+                .filter(value -> value > 5)
+                .reduce(1, (acumulator, value) -> acumulator * value);
+
+        System.out.println("resultReduceIdentity = " + resultReduceIdentity);
+
+        //con el tercer argumento lo que se hace es combinar los resultados parciales
+        //El tipo de resultado es el tipo del acumulador, el acumulador es el mismo tipo de los partials
+        Integer resultReduceSum = Stream.of(
+                        new Student("Manolo", 20),
+                        new Student("Baldomero", 30),
+                        new Student("Germán", 40)
+                )
+                .reduce(0, (partial, student) -> partial + student.getAge(), (partial1, partial2) -> partial1 + partial2);
+
+        System.out.println("resultReduceSum = " + resultReduceSum);
+    }
+
+    private Stream<Integer> getRandomNumbers(Integer value) {
+        return random.ints(value, 0, 10).boxed();
     }
 
     private Stream<String> getFilterNames(List<String> names) {
