@@ -50,6 +50,9 @@ public class Book implements Comparable<Book>{
         return yearPublisher == book.yearPublisher && isbn.equals(book.isbn) && title.equals(book.title) && genre == book.genre;
     }
 
+    //El equals es particularmente útil ya que permite saber cuando un elemento se repito dentro de alguna estructura de datos
+    //Junto con el comparator, que hace la comparación en base al argumento especificado
+
     @Override
     public int hashCode() {
         return Objects.hash(isbn, title, yearPublisher, genre);

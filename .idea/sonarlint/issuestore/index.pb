@@ -115,3 +115,21 @@ b
 2src/main/v9MethodReferenceAdvance/NumberUtils.java,f\6\f6840ac5b0c9f510ddeef1a221973a86cdca4065
 \
 ,src/main/v9MethodReferenceAdvance/Flujo.java,e\f\ef4f6a0f58a463c1a99cc8d6cd12d8eb5bf4e271
+U
+%src/main/v10Optional/NumberUtils.java,3\5\356c92981e6e19c7def727ca1a6c5d6e20c29cde
+N
+src/main/v11Streams/Flujo.java,f\5\f5852f8a3cb6cf7da29dfc2384b274b2e364ee3f
+T
+$src/main/v11Streams/NumberUtils.java,9\6\969b63fb1347b89b149f19477bcf3f0ca665f1cf
+T
+$src/main/v11Streams/Description.java,a\3\a32c4202c8173c6d0a1a32b488bfa8ffadb4ce92
+O
+src/main/v10Optional/Flujo.java,1\b\1bef5ab443402354bb1c68f65227c79e14ac7d40
+U
+%src/main/v10Optional/Description.java,e\9\e9644678d87b3220525676ce68ee72a5d8c28b0f
+P
+ src/main/v11Streams/Student.java,0\5\05561351d8d091bba6e05af3a740a92798bdd502
+]
+-src/main/streamsEnElProyecto/Description.java,5\a\5afc707c4d8406e7ca91e89a020d3ea2df0caf70
+]
+-src/main/streamsEnElProyecto/NumberUtils.java,7\b\7b14c983a78cbb84939f88eb593396e12e056985
