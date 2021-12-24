@@ -3,6 +3,7 @@ package main.v12Collect;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -193,6 +194,51 @@ public class Main {
                 ));
 
         System.out.println("resultWithSummarizing = " + resultWithSummarizing);
+
+        //Recolección de un Stream con partición
+        //En este caso, se desean obtener solamente dos grupos
+        //Agrupa en dos grupos, uno que cumple la condición y otro que no la cumple
+
+        Map<Boolean, List<Book>> resultPartition = bookList.stream()
+                .collect(Collectors.partitioningBy(book -> book.getYearPublisher() < 2000));
+
+        System.out.println("resultPartition = " + resultPartition);
+
+        //Otra forma de hacerlo u otro ejemplo
+        //Contar el número de libros posteriores o anteriores al año 2000
+
+        Map<Boolean, Long> resultPartition2 = bookList.stream()
+                .collect(Collectors.partitioningBy(book -> book.getYearPublisher() < 2000,
+                        Collectors.counting()));
+
+        System.out.println("resultPartition2 = " + resultPartition2);
+
+        //Recolección de un Stream con filtrado
+
+        Map<Genre, Long> resultFilterStream = bookList.stream()
+                .filter(book -> book.getYearPublisher() >= 2000)
+                .collect(Collectors.groupingBy(
+                        book -> book.getGenre(),
+                        Collectors.counting()
+                ));
+
+        System.out.println("resultFilterStream = " + resultFilterStream);
+
+        //Otra forma
+        //En el filtering, el primer argumento se refiere al filtro que se desea hacer y el segundo es el tipo de
+        //colección que se desea realizar
+
+        Map<Genre, Long> resultFiltering = bookList.stream()
+                .collect(Collectors.groupingBy(
+                        book -> book.getGenre(),
+                        Collectors.filtering(
+                                book -> book.getYearPublisher() >= 2000,
+                                Collectors.counting()
+                        )
+                ));
+
+        System.out.println("resultFiltering = " + resultFiltering);
+
     }
 
 }
